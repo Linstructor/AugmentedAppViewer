@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Frame frame = arFragment.getArSceneView().getArFrame();
         Collection<AugmentedImage> augmentedImages = frame.getUpdatedTrackables(AugmentedImage.class);
         for (AugmentedImage augmentedImage : augmentedImages) {
-            Log.i("MainAct", String.valueOf(augmentedImage.getTrackingState()));t ini
+            Log.i("MainAct", String.valueOf(augmentedImage.getTrackingState()));
             if (augmentedImage.getTrackingState() == TrackingState.TRACKING) {
                 if (shouldAddModel) {
                     placeObject(arFragment, augmentedImage.createAnchor(augmentedImage.getCenterPose()), Uri.parse("car.sfb"));
